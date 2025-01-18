@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Artists"
+}
+
 export default function ArtistList() {
   return (
     <>
