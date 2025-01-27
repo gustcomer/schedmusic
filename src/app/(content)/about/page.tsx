@@ -4,7 +4,12 @@ export const metadata = {
   title: 'SchedMusic | About Page'
 }
 
-export default function About() {
+export default async function About() {
+  await new Promise(resolve => {
+    setTimeout(() => {
+      resolve("intentional delay");
+    }, 2000)
+  });
   return (
     <>
       <h1>About page</h1>
