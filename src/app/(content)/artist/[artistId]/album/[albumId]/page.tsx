@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 
 export default async function ArtistAlbumDetail({
   params,
@@ -7,7 +7,8 @@ export default async function ArtistAlbumDetail({
 }) {
   const { artistId, albumId } = await params;
   if (parseInt(artistId) > 1000) {
-    notFound();
+    //notFound(); // let's just try another option with redirect
+    redirect("/")
   }
   return (
     <h1>
